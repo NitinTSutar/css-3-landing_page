@@ -1,92 +1,167 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
 }
-body{
-    padding: 40px 100px 0px 100px;
+body {
+  padding: 40px 100px 0px 100px;
+  overflow: hidden;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+img[alt="logo"] {
+  height: 40px;
+}
+.nav-items {
+  display: flex;
+  gap: 50px;
+}
+.nav-item {
+  color: #251069;
+}
+.signin-btn {
+  border: 0;
+  background: #be22e4;
+  background: linear-gradient(270deg, #e278e6, #6526be);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 30px;
+}
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  height: 85vh;
+  flex-shrink: 0;
+}
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-width: 320px;
+  justify-content: center;
+  top: 150px;
+  max-width: 50;
+}
+.left-section > h1 {
+  font-size: 5.4em;
+  color: #251069;
+  width: 150%;
+}
+.left-section > h4 {
+  font-size: 14px;
+  font-weight: lighter;
+  width: 300px;
+}
+.learn-more-btn {
+  background-color: red;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  width: 150px;
+  border: 0;
+  border-radius: 50px;
+  background: #be22e4;
+  background: linear-gradient(270deg, #e278e6, #6526be);
+}
+.imgs-div {
+  align-self: center;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: -1;
+  justify-content: center;
+}
+.vector-img {
+  position: absolute;
+  top: 70%;
+  left: 420px;
+}
+.vector-dot {
+  position: absolute;
+  top: 70%;
+  left: 470px;
+}
+img[alt="intro-img"] {
+  width: 60vw;
+  flex-shrink: 0;
+}
+
+.imgs-div::before {
+  content: "";
+  height: 2000px;
+  width: 2000px;
+  position: absolute;
+  bottom: 30%;
+  left: 30%;
+  rotate: -15deg;
+  border-radius: 200px;
+  background: #0a4d9a;
+  background: linear-gradient(225deg, #ddc595, #b391e2);
+  z-index: -1;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: rgb(0, 0, 0);
+    display: none;
+    cursor: pointer;
+  }
+@media (max-width: 1316px) {
+    .left-section > h1 {
+        font-size: 60px;
+        width: 150%;
+    }
+    img[alt="intro-img"] {
+    width: 50vw;
+    }
+    
+}
+@media (max-width: 900px) {
+    
+    body {
+        padding: 20px 50px 0px 50px;
+    }
+    .nav-items {
+        gap: 30px;
+    }
+    img[alt="intro-img"] {
+        position: absolute;
+        left: 40%; 
+        right: 0; 
+        margin-inline: auto; 
+        width: fit-content;
+        width: 450px;
+        top:25%
+      }
 
 }
-nav{
-    display: flex;
-    justify-content:space-between;
-    align-items:center;
-}
-img[ alt="logo"]{
-    height:40px;
-}
-.nav-items{
-    display: flex;
-    gap: 50px;
-}
-.nav-item{
-    color: #251069;
-}
-.signin-btn{
-    border: 0;
-    background: #BE22E4;
-    background: linear-gradient(270deg, #e278e6, #6526be);
-    color: white;
-    padding: 5px 20px;
-    border-radius: 30px;
-}
-.intro-section{
-    display: flex;
-    justify-content: space-between;
-}
-.left-section{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    position: relative;
-    top: 150px;
-}
-.left-section>h1{
-    font-size: 100px;
-    color: #251069;
-}
-.left-section>h4{
-    padding-right: 30%;
-    font-size: 14px;
-    font-weight: lighter;
-}
-.learn-more-btn{
-    padding: 10px 20px;
-    color: white;
-    font-size: 25px;
-    width: 38%;
-    border: 0;
-    border-radius: 50px;
-    background: #BE22E4;
-    background: linear-gradient(270deg, #e278e6, #6526be);
-}
-.vector-img{
-    position: absolute;
-    bottom: 20%;
-}
-.vector-dot{
-    position: relative;
-    bottom: 30%;
-    left: 6.5%;
-}
-img[alt="intro-img"]{
-    position: relative;
-    height:83%;
-    /* background-color: blue */
-}
-
-.imgs-div::before{
-    content: '';
-    /* background: red; */
-    height: 150%;
-    width: 150%;
-    position: absolute;
-    top: -98%;
-    right: -95%;
-    rotate: -20deg;
-    border-radius: 200px;
-    background: #0a4d9a;
-    background: linear-gradient(225deg, #ddc595, #b391e2);
-    z-index: -1;
+@media(max-width:640px){
+    #menu-icon{
+        display: inline-block;
+    }
+    .nav-items{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: rgba(140, 10, 187, 0.588);
+        border: 2px dashed black;
+        display: none;
+        border-radius: 10px;
+    }
+    .nav-items.active{
+        display: block;
+    }
+    .nav-items a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
 }
